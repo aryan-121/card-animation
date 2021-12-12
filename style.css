@@ -1,0 +1,66 @@
+body{
+    background-color: rgba(255, 250, 207, 1);
+    height: 100vh;
+}
+
+#container{
+    height: 100vh;
+    perspective: 2500px;
+}
+
+.card{
+    position: absolute;
+    top: 18%;
+    left: 37%;
+    text-align: center;
+    padding-top: 15px;
+    height: 64vh;
+    width: 26vw;
+    font-size: xx-large;
+    color: #fbffff;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#blueCard{
+    background-color: #0200fb;
+}
+
+#redCard{
+    background-color: #ff0001;
+    color: #ff0001;
+}
+
+.cardMover{
+    animation: open 2.5s forwards;
+}
+
+.containerMoveBlue{
+    animation: containerMoveBlue 1s ease 2.6s forwards;
+}
+
+.containerMoveRed{
+    transition: 1s ease 2.5s;
+    transform: translateX(13vw);
+}
+
+@keyframes open {
+    from{
+        transform-origin: left;
+        transform: rotateY(0deg);
+    }
+    to{
+        transform-origin: left;
+        transform: rotateY(-180deg);
+    }
+}
+
+@keyframes containerMoveBlue {
+    from{
+        margin-left: 0px; 
+    }
+    to{
+        margin-left: 24%;
+    }
+}
+
